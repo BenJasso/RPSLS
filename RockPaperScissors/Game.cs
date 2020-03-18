@@ -13,8 +13,8 @@ namespace RockPaperScissors
         string gameTypeChoice;
         Player player1;
         Player player2;
-        int player1Score;
-        int player2Score;
+        public int player1Score;
+        public int player2Score;
       
         
 
@@ -47,48 +47,49 @@ namespace RockPaperScissors
                         player2.PlayerDecideGesture();
                         GainPointCheck();
                     }
-                    if (player1.score == 3)
-                    {
-                        Console.WriteLine($"{player1.name} wins the game!!!!");
-                        player1.score = 0;
-                        player2.score = 0;
-                        Console.WriteLine("Type 1 to play again. Type 2 to end");
-                        string userInput = Console.ReadLine();
-                        if (userInput == "1")
-                        {
-                            player1.score = 0;
-                            player2.score = 0;
-                        }
-                        else if (userInput == "2")
-                        {
-                            Console.WriteLine("Hope you enjoyed playing!");
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{player2.name} wins the game!!!!");
-                        player1.score = 0;
-                        player2.score = 0;
-                        Console.WriteLine("Type 1 to play again. Type 2 to end");
-                        string userInput = Console.ReadLine();
-                        if (userInput == "1")
-                        {
-                            player1.score = 0;
-                            player2.score = 0;
-                            player1Score = player1.score;
-                            player2Score = player2.score;
-                            break;
-                        }
-                        else if (userInput == "2")
-                        {
-                            Console.WriteLine("Hope you enjoyed playing!");
-                            player1Score = player1.score;
-                            player2Score = player2.score;
-                            break;
-                        }
-                    }
-                    break;
+                            if (player1.score == 3)
+                            {
+                                Console.WriteLine($"{player1.name} wins the game!!!!");
+                        
+                                Console.WriteLine("Type 1 to play again. Type 2 to end");
+                                string userInput = Console.ReadLine();
+                                if (userInput == "1")
+                                {
+                                    player1Score = 0;
+                                    player2Score = 0;
+                                    gameTypeChoice = null;
+                            
+                                }
+                                else if (userInput == "2")
+                                {
+                                    Console.WriteLine("Hope you enjoyed playing!");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine($"{player2.name} wins the game!!!!");
+                        
+                                Console.WriteLine("Type 1 to play again. Type 2 to end");
+                                string userInput = Console.ReadLine();
+                                if (userInput == "1")
+                                {
+                                    
+                                    player1Score = 0;
+                                    player2Score = 0;
+                                    gameTypeChoice = null;
+                            
+                                }
+                                else if (userInput == "2")
+                                {
+                                    Console.WriteLine("Hope you enjoyed playing!");
+                            
+                                    break;
+                                }
+                        
+                            }
+                    
                 }
+                
             }
             }
             

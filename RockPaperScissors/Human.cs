@@ -18,6 +18,7 @@ namespace RockPaperScissors
             :base(name)
         {
             this.name = name;
+            score = 0;
             
         }
 
