@@ -27,7 +27,7 @@ namespace RockPaperScissors
         {
             var random = new Random();
             gestureChoice = gestures[random.Next(0,4)];
-            Console.WriteLine(gestureChoice);
+            Console.WriteLine($"\n{name}:{gestureChoice}");
             Console.ReadLine();
             
 

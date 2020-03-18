@@ -27,12 +27,13 @@ namespace RockPaperScissors
 
         public override void PlayerDecideGesture()
         {
-            Console.WriteLine($"Please choose an option:");
+            Console.WriteLine($"\n{name} please choose an option:");
             foreach(string gesture in gestures)
             {
                 Console.WriteLine(gesture);
             }
             gestureChoice = Console.ReadLine();
+            Console.WriteLine($"\n{name}:{gestureChoice}");
         }
     }
 }
