@@ -11,11 +11,11 @@ namespace RockPaperScissors
         static void Main(string[] args)
         {
             //variables
-            Game runGame = new Game();
+            Game RPSLS = new Game();
 
 
             //methods
-            runGame.AssignGameMode();
+            RPSLS.RunGame();
             
 
         }
