@@ -6,23 +6,27 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    abstract class Player
+     abstract class Player
     {
         //member variables
-        string name;
+        public string name;
+        public int score;
+        public string gestureChoice;
+        public string[] gestures = new string[5] { "Rock", "Paper", "Scissors", "Lizard", "Spock" };
+       
 
 
 
         //Constructor
-        public Player()
+        public Player(string name)
         {
-
+            this.name = name;
         }
 
 
         //methods
 
-        public abstract void PlayerDecide();
+        public abstract void PlayerDecideGesture();
         
 
     }

@@ -14,13 +14,23 @@ namespace RockPaperScissors
 
 
         //Constructor
+        public Computer(string name):base(name)
 
+        {
+            this.name = name;
+        }
 
 
 
         //methods
-        public override void PlayerDecide()
+        public override void PlayerDecideGesture()
         {
+            var random = new Random();
+            gestureChoice = gestures[random.Next(0,4)];
+            Console.WriteLine(gestureChoice);
+            Console.ReadLine();
+            
+
             
         }
 
