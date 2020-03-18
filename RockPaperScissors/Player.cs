@@ -14,11 +14,10 @@ namespace RockPaperScissors
 
 
         //Constructor
-        public Player(string name)
+        public Player()
         {
-            this.name = name;
-        }
 
+        }
 
 
         //methods

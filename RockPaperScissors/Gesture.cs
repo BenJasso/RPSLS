@@ -8,5 +8,23 @@ namespace RockPaperScissors
 {
     class Gesture
     {
+        //member variables
+        string name;
+
+
+
+        //Constructor
+        public Gesture(string name)
+        {
+
+        }
+
+
+
+        //methods
+        
+
+
+
     }
 }

@@ -19,5 +19,10 @@ namespace RockPaperScissors
 
 
         //methods
+        public override void PlayerDecide()
+        {
+            
+        }
+
     }
 }
