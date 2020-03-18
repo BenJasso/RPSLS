@@ -253,33 +253,37 @@ namespace RockPaperScissors
         }
         public void AssignGameMode()
         {
-            Console.WriteLine("\nPress 1 for Single Player Mode\nPress 2 for Multiplayer Mode");
-            gameTypeChoice = Console.ReadLine();
-            if (gameTypeChoice != "1" && gameTypeChoice != "2")
+
+
+            while (gameTypeChoice != "1" && gameTypeChoice != "2")
             {
-                while (gameTypeChoice != "1" && gameTypeChoice != "2")
+                Console.WriteLine("\nPress 1 for Single Player Mode\nPress 2 for Multiplayer Mode");
+                gameTypeChoice = Console.ReadLine();
+                
+                if (gameTypeChoice == "1")
                 {
-                    Console.WriteLine("Not a valid entry.\nPress 1 for Single Player Mode\nPress 2 for Multiplayer Mode");
-                    gameTypeChoice = Console.ReadLine();
+                    Console.WriteLine("Player 1 enter your name:");
+
+                    player1 = new Human(Console.ReadLine());
+                    player2 = new Computer("Computer");
+                    Console.WriteLine($"\n{player1.name}:{player1.score}\n{player2.name}:{player2.score}");
+                }
+                else if (gameTypeChoice == "2")
+                {
+                    Console.WriteLine("Player 1 enter your name:");
+                    player1 = new Human(Console.ReadLine());
+                    Console.WriteLine("Player 2 enter your name:");
+                    player2 = new Human(Console.ReadLine());
+                    Console.WriteLine($"\n{player1.name}:{player1.score}\n{player2.name}:{player2.score}");
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid entry. Please enter again");
                 }
             }
-            else if (gameTypeChoice == "1")
-            {
-                Console.WriteLine("Player 1 enter your name:");
-                
-                player1 = new Human(Console.ReadLine());
-                player2 = new Computer("Computer");
-                Console.WriteLine($"\n{player1.name}:{player1.score}\n{player2.name}:{player2.score}");
-            }
-            else if (gameTypeChoice == "2")
-            {
-                Console.WriteLine("Player 1 enter your name:");
-                 player1 = new Human(Console.ReadLine());
-                Console.WriteLine("Player 2 enter your name:");
-                 player2 = new Human(Console.ReadLine());
-                Console.WriteLine($"\n{player1.name}:{player1.score}\n{player2.name}:{player2.score}");
+               
 
-            }
         }
 
 
