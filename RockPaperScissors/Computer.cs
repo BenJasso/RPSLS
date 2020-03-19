@@ -13,6 +13,7 @@ namespace RockPaperScissors
 
 
 
+
         //Constructor
         public Computer(string name):base(name)
 

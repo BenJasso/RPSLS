@@ -19,6 +19,7 @@ namespace RockPaperScissors
         {
             this.name = name;
             score = 0;
+
             
         }
 
